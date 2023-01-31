@@ -44,3 +44,26 @@
   height: 100%;
   object-fit: cover;
 }
+
+.firstContent{
+  position: absolute;
+  right: 2%;
+  top: 32%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.firstContentSpan{
+  background-color: rgba(234, 0, 255, 0.469);
+  background-image: linear-gradient(45deg, #ffffff, #282526);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+
+}
