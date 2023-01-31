@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 // import ethnavlogo from "../assets/ethnavlogo.png";
+// import ethlogo from "public/ethlogo.png";
+
 
 const NavBar = () => {
   const [btcValue, setBtcValue] = useState("");
@@ -25,19 +28,22 @@ const NavBar = () => {
 
   return (
     <nav className="navBar flexBetween full-width">
-      <div className="logo">
-        {/* <img src={ethnavlogo} alt="" /> */}
-      </div>
+
+                {/* <Image
+                src={ethlogo}
+                alt="ETH logo"
+                className="imageLogo"
+                /> */}
 
       <div className="hamburger" onClick={() => setNavBarOpen(!navBarOpen)}>
         <i className={`fas fa-${navBarOpen ? "times" : "bars"}`} />
       </div>
 
       <div className={`flexBetween links ${navBarOpen ? "open" : ""}`}>
-        <a href="#home" className="linksi">
+        <a href="#hero" className="linksi">
           INÍCIO
         </a>
-        <a href="#oethhistory" className="linksi">
+        <a href="#aboutEth" className="linksi">
           O ETHERIUM
         </a>
         <span className="linksi">GRÁFICOS</span>

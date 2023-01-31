@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Montserrat', sans-serif;
 }
 
 
@@ -28,12 +30,47 @@
 .navBar{
   z-index: 1;
   position: fixed;
-  top: 0;
   margin-bottom: 30px;
   background-color: rgba(0, 0, 0, 0.39);
-  left: 0;
+  padding: 0 16px;
   height: 10%;
 }
+
+.imageLogo{
+  width: auto;
+  height: 40%;
+}
+
+.links{
+  width: 50%;
+  margin-left: 20%;
+}
+
+
+.linksi{
+  text-decoration: none;
+  color: #fff;
+  font-size: 80%;
+  cursor: pointer;
+  font-style: italic;
+  transition: transform 0.2s ease-in-out;
+}
+
+.linksi:hover{
+  color: #c87af8;
+  transform: scale(1.2);
+}
+
+.ethnavprice{
+  width: 150px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #fff;
+  border: 1px solid #c87af8;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
 
 .home{
   height: 120vh;
@@ -65,5 +102,16 @@
   -webkit-text-fill-color: transparent; 
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
+
+}
+
+
+.aboutEth{
+  height: 100vh;
+}
+
+
+::-webkit-scrollbar {
+  width: 0px;
 
 }

@@ -3,12 +3,13 @@ import React from "react";
 
 const AboutEthManiacos = () => {
     return (
-        <div className="aboutEth full-width h100">
+        <div className="aboutEth full-width">
 
             <div className="ethFlutuanteSection flex-between full-width h100" >
                 {/* <img src={ethflutuante} alt="" /> */}
                 {/* <img className="inverter" src={ethflutuante} alt="" /> */}
             </div>
+
         </div>
 
         
