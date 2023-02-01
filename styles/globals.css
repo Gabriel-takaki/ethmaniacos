@@ -32,7 +32,7 @@
   position: fixed;
   margin-bottom: 30px;
   background-color: rgba(0, 0, 0, 0.39);
-  padding: 0 16px;
+  padding: 0 32px;
   height: 10%;
 }
 
@@ -62,7 +62,8 @@
 }
 
 .ethnavprice{
-  width: 150px;
+  width: 130px;
+  height: 38%;
   font-size: 0.7rem;
   font-weight: 600;
   color: #fff;
@@ -71,14 +72,39 @@
   padding: 5px 10px;
 }
 
+.ethIconeNavPrice{
+  height: 90%;
+  width: auto;
+  transform: translateY(0px);
+  animation: rotate 3.5s ease-in-out infinite
+}
+
 
 .home{
   height: 120vh;
+  background-color: #282526;
 }
 
-.videoHome{
+.ethFlutuanteHero{
+  position: absolute;
+  top: 43%;
+  left: 20%;
+  width: auto;
+  height: 45%;
+  animation: float 3.5s ease-in-out infinite;
+}
+
+.bg1ToDestkop{
   width: 100%;
   height: 100%;
+  display: flex;
+  object-fit: cover;
+}
+
+.bg1ToMobile{
+  width: 100%;
+  height: 100%;
+  display: none;
   object-fit: cover;
 }
 
@@ -110,8 +136,78 @@
   height: 100vh;
 }
 
+@keyframes float{
+  0%{
+    transform: translateY(0%);
+  }
+  50%{
+    transform: translateY(-20%);
+  }
+  100%{
+    transform: translateY(0%);
+  }
+}
+
+@keyframes rotate{
+  0%{
+    transform: translateY(0%);
+  }
+  50%{
+    transform: scaleX(-1);
+  }
+  100%{
+    transform: translateY(0%);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  from {
+    color: #55cdff;
+  }
+  to {
+    color: #c87af8;
+  }
+}
 
 ::-webkit-scrollbar {
   width: 0px;
 
+}
+
+
+@media screen and (max-width: 768px){
+  .bg1ToDestkop{
+    display: none;
+  }
+  .bg1ToMobile{
+    display: flex;
+  }
+
+  .firstContent{
+    font-size: 1rem;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+  }
+
+  .firstContentSpan{
+    background-color: rgba(0, 0, 0, 0.469);
+    background-image: linear-gradient(45deg, #000000, #504a4c);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+  }
 }

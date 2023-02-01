@@ -1,39 +1,40 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-// import ethnavlogo from "../assets/ethnavlogo.png";
-// import ethlogo from "public/ethlogo.png";
-
+import logoNavBar from "public/logonavbar.webp"
+import ethIcone from "public/ethicone.webp"
 
 const NavBar = () => {
-  const [btcValue, setBtcValue] = useState("");
   const [navBarOpen, setNavBarOpen] = useState(false);
-
+  const [btcValue, setBtcValue] = useState("");
+  const [ethPricePink, setEthPricePink] = useState(false);
+  
+  const myStyles = {
+    color: ethPricePink ? "#c87af8" : "white"
+  };
+  
   useEffect(() => {
     const fetchData = async () => {
       const res = await window.fetch("https://data.messari.io/api/v1/assets/eth/metrics");
       const messariRes = await res.json();
       const payload = messariRes.data;
       console.log(payload);
-      setBtcValue(
-        `${payload.market_data.price_usd.toLocaleString()}`
-        // "$" + payload.marketcap.current_marketcap_usd.toLocaleString()
-
-      );
+      setBtcValue(`${payload.market_data.price_usd.toLocaleString()}`);
+      setEthPricePink(prevState => !prevState );
     };
-
+  
     fetchData();
-    const intervalId = setInterval(fetchData, 7500);
+    const intervalId = setInterval(fetchData, 1500);
     return () => clearInterval(intervalId);
   }, []);
-
+  
   return (
     <nav className="navBar flexBetween full-width">
 
-                {/* <Image
-                src={ethlogo}
+                <Image
+                src={logoNavBar}
                 alt="ETH logo"
                 className="imageLogo"
-                /> */}
+                />
 
       <div className="hamburger" onClick={() => setNavBarOpen(!navBarOpen)}>
         <i className={`fas fa-${navBarOpen ? "times" : "bars"}`} />
@@ -52,8 +53,12 @@ const NavBar = () => {
       </div>
 
       <div className="flexBetween ethnavprice">
-        {/* <img src={cursor} className="h100" alt="" /> */}
-        <span className="blink">{btcValue} USD</span>
+            <Image
+                src={ethIcone}
+                alt="ETH logo"
+                className="ethIconeNavPrice"
+                />
+        <span style={myStyles} >{btcValue} USD</span>
       </div>
     </nav>
   );

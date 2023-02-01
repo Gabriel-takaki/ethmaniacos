@@ -1,13 +1,31 @@
 import React from "react";
 // import Content from "./content";
-// import bg1 from "../assets/bg1.webm";
+import Image from "next/image";
+import bg1Desktop from "public/bg1Desktop.webp";
+import bg1Mobile from "public/bg1Mobile.jpg";
+import ethFlutuante from "public/ethflutuante.png";
 
 const Hero = () => {
     return (
         <div className="home full-width">
-              <video className="videoHome" src="/bg1.webm"  muted autoPlay loop >
+              {/* <video className="videoHome" src="/bg1.webm"  muted autoPlay loop > */}
         {/* <source src="/bg1.webm" /> */}
-      </video>
+      {/* </video> */}
+
+            <Image 
+            className="bg1ToDestkop"
+            src={bg1Desktop}
+            />
+
+            <Image 
+            className="bg1ToMobile"
+            src={bg1Mobile}
+            />
+
+            <Image 
+            className="ethFlutuanteHero"
+            src={ethFlutuante}
+            />
 
             <div className="bgVideo">
                 
