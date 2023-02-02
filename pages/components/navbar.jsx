@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import logoNavBar from "public/logonavbar.webp"
 import ethIcone from "public/ethicone.webp"
+import { AiOutlineMenu } from "react-icons/ai";
 
 const NavBar = () => {
   const [navBarOpen, setNavBarOpen] = useState(false);
@@ -60,6 +61,9 @@ const NavBar = () => {
                 />
         <span style={myStyles} >{btcValue} USD</span>
       </div>
+
+    <AiOutlineMenu className="menuHamburguer"/>
+
     </nav>
   );
 };
