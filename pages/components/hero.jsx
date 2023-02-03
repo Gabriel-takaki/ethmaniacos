@@ -1,9 +1,9 @@
 import React from "react";
 // import Content from "./content";
 import Image from "next/image";
-import bg1Desktop from "public/bg1Desk.webp";
+import bg1Desktop from "public/bg1&2.webp";
 import bg1Mobile from "public/bg1Mob.webp";
-import ethFlutuante from "public/ethflutuante.png";
+import ethFlutuante from "public/ethflutuante.webp";
 import rodaFlutuante from "public/rodaFlutuanteBg1.webp";
 
 
@@ -14,22 +14,42 @@ const Hero = () => {
         <source src="/bg1.webm" />
       </video> */}
 
-            {/* <Image 
-            className="bg1ToDesktop"
+        <Image 
+            className="bg1ToDesktop bgInverter "
             src={bg1Desktop}
             />
+            {/*
 
             <Image 
             className="bg1ToMobile"
             src={bg1Mobile}
             /> */}
 
-            <Image 
-            className="ethFlutuanteHero"
+            {/* <Image 
+            className="ethflutuante0 ethflutuantefix"
             src={ethFlutuante}
             />
 
+            <Image 
+            className="ethflutuante1 ethflutuantefix"
+            src={ethFlutuante}
+            />
+
+            <Image 
+            className="ethflutuante2 ethflutuantefix"
+            src={ethFlutuante}
+            /> */}
           
+
+          <Image 
+            className="ethflutuante4 ethflutuantefix"
+            src={ethFlutuante}
+            />
+
+          <Image 
+            className="ethflutuante3 ethflutuantefix"
+            src={ethFlutuante}
+            />
 
             <div className="bgVideo">
                 

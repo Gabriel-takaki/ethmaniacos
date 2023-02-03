@@ -6,6 +6,9 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+body{
+  background-color: #000;
+}
 
 .flex{
   display: flex;
@@ -34,6 +37,7 @@
   background-color: rgba(0, 0, 0, 0.39);
   padding: 0 32px;
   height: 10%;
+  
 }
 
 .imageLogo{
@@ -81,10 +85,8 @@
 
 
 .home{
-  height: 120vh;
- background: #c87af8;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to bottom, #000000, #161517, #392446, #c87af8);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to bottom, #000000, #150d1a, #392446, #c87af8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 100vh;
+  background-color: #000000;
 }
 
 .rodaFlutuanteHero{
@@ -100,35 +102,46 @@ background: linear-gradient(to bottom, #000000, #150d1a, #392446, #c87af8); /* W
   animation-timing-function: linear; 
 }
 
-.ethFlutuanteHero{
-  position: absolute;
-  top: 43%;
-  left: 25%;
-  width: auto;
-  height:30%;
-  animation: float 3.5s ease-in-out infinite;
+.ethflutuante0{
+  animation: float0 5s ease-in-out infinite;
 }
 
-.cuboFlutuante0{
-  position: absolute;
-  top: 85vh;
-  left: -5%;
-  width: auto;
-  height:20%;
-  animation: floatcubo0 4s ease-in-out infinite;
-  -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(5px);
+.ethflutuante1{
+  animation: float1 5s ease-in-out infinite;
 }
+
+.ethflutuante2{
+  animation: float2 5s ease-in-out infinite;
+  
+}
+
+.ethflutuante3{
+  animation: spin 5s ease-in-out infinite;
+}
+
+.ethflutuante4{
+  animation: spin2 5s ease-in-out infinite;
+}
+
+.ethflutuantefix{
+  position: absolute;
+  top: 30%;
+  left: 25%;
+  width: auto;
+  filter: drop-shadow(5px 5px 5px rgb(0, 0, 0));
+  height:30%;
+  animation-delay: 1.5s;
+}
+
+
 
 .cuboFlutuante1{
   position: absolute;
-  top: 100vh;
-  left: 5%;
+  top: 125vh;
+  left: 20%;
   width: auto;
-  height:20%;
+  height:17%;
+  filter: drop-shadow(5px 5px 5px #222);
   animation: floatcubo1 4s ease-in-out infinite;
   -webkit-filter: blur(5px);
   -moz-filter: blur(5px);
@@ -139,11 +152,14 @@ background: linear-gradient(to bottom, #000000, #150d1a, #392446, #c87af8); /* W
 
 .cuboFlutuante2{
   position: absolute;
-  top: 115vh;
+  top: 155vh;
   left: 15%;
+  transform: rotateY(180deg);
   width: auto;
-  height:30%;
-  animation: floatcubo2 4s ease-in-out infinite;
+  height:25%;
+  animation: float2 4s ease-in-out infinite;
+  filter: drop-shadow(5px 5px 5px #222);
+ 
   -webkit-filter: blur(4px);
   -moz-filter: blur(4px);
   -o-filter: blur(4px);
@@ -155,8 +171,9 @@ background: linear-gradient(to bottom, #000000, #150d1a, #392446, #c87af8); /* W
   position: absolute;
   top: 130vh;
   left: 30%;
+  filter: drop-shadow(10px 10px 10px #222);
   width: auto;
-  height:40%;
+  height:50%;
   animation: float 4s ease-in-out infinite;
 
 }
@@ -164,16 +181,9 @@ background: linear-gradient(to bottom, #000000, #150d1a, #392446, #c87af8); /* W
 .bg1ToDesktop{
   width: 100%;
   height: 100%;
-  display: flex;
-  object-fit: cover;
+  filter: brightness(50%) opacity(90%) ;
 }
 
-.bg1ToMobile{
-  width: 100%;
-  height: 100%;
-  display: none;
-  object-fit: cover;
-}
 
 .firstContent{
   position: absolute;
@@ -192,6 +202,7 @@ background: linear-gradient(to bottom, #000000, #150d1a, #392446, #c87af8); /* W
   background-size: 100%;
   background-repeat: repeat;
   transition: 1s;
+  -webkit-animation: hideon 2s;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; 
   -moz-background-clip: text;
@@ -207,13 +218,53 @@ background: linear-gradient(to bottom, #000000, #150d1a, #392446, #c87af8); /* W
 .aboutEth{
   height: 100vh;
   background: #c87af8;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #000000, #392446, #c87af8); 
-  background: linear-gradient(to top, #000000, #392446, #c87af8); 
+  background: -webkit-linear-gradient(to bottom, #000000, #000000 ); 
+  background: linear-gradient(to bottom,  #000000, #000000); 
+}
+
+.textAboutEthManiacos{
+  color: #fff;
+  float: right;
+  margin-top: 50px;
 }
 
 .menuHamburguer{
   color: white;
   display: none;
+}
+
+.bgInverter{
+    transform: rotatex(180deg);
+}
+
+.endireitaEth{
+  transform: rotatey(50deg);
+}
+
+.carroussel{
+  background-color: red;
+  position: absolute;
+  top: 120vh;
+  right: 5%;
+}
+
+.graphics{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #07001a;
+}
+
+.principalGraphics{
+  padding: 10px;
+  background: #396afc;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #c87af8, #55cdff);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #c87af8, #55cdff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  width: 60%;
+  height: 50%;
+  border-radius: 16px;
 }
 
 @keyframes spin {
@@ -227,7 +278,7 @@ background: linear-gradient(to bottom, #000000, #150d1a, #392446, #c87af8); /* W
 
 @keyframes float{
   0%{
-    transform: translateY(0%);
+    transform: translateY(0%) ;
   }
   50%{
     transform: translateY(-20%);
@@ -235,6 +286,45 @@ background: linear-gradient(to bottom, #000000, #150d1a, #392446, #c87af8); /* W
   }
   100%{
     transform: translateY(0%);
+  }
+}
+
+@keyframes float0{
+  0%{
+    transform: translateY(0%);
+  }
+  50%{
+    transform: translateY(30%);
+    
+  }
+  100%{
+    transform: translateY(0%);
+  }
+}
+
+@keyframes float1{
+  0%{
+    transform: translateY(0%) ;
+  }
+  50%{
+    transform: translateY(-30%);
+    
+  }
+  100%{
+    transform: translateY(0%);
+  }
+}
+
+@keyframes float2{
+  0%{
+    transform: translateY(0%) rotateY(180deg) ;
+  }
+  50%{
+    transform: translateY(-30%) rotateY(180deg) ;
+    
+  }
+  100%{
+    transform: translateY(0%) rotateY(180deg) ;
   }
 }
 
@@ -287,6 +377,28 @@ background: linear-gradient(to bottom, #000000, #150d1a, #392446, #c87af8); /* W
   }
 }
 
+
+@keyframes rotate2{
+  0%{
+    transform: translateY(0%);
+  }
+  50%{
+    transform: scaleX(+2);
+  }
+  100%{
+    transform: translateY(0%);
+  }
+}
+
+@keyframes hideon {
+  from {
+    transform: translatex(-1000px);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -305,6 +417,8 @@ background: linear-gradient(to bottom, #000000, #150d1a, #392446, #c87af8); /* W
   }
 }
 
+
+
 ::-webkit-scrollbar {
   width: 0px;
 
@@ -312,6 +426,18 @@ background: linear-gradient(to bottom, #000000, #150d1a, #392446, #c87af8); /* W
 
 
 @media screen and (max-width: 768px){
+
+
+  .ethflutuantefix{
+    position: absolute;
+    top: 25%;
+    left: 35vw;
+    width: auto;
+    filter: drop-shadow(20px 20px 20px rgb(0, 0, 0));
+
+    height:30%;
+    animation-delay: 1.5s;
+  }
 
   .ethFlutuanteHero{
     position: absolute;
@@ -334,24 +460,25 @@ background: linear-gradient(to bottom, #000000, #150d1a, #392446, #c87af8); /* W
     display: none;
   }
 
-  .bg1ToDesktop{
+  /* .bg1ToDesktop{
     display: none;
   }
   .bg1ToMobile{
     display: flex;
-  }
+  } */
 
   .firstContent{
-    font-size: 1rem;
-    top: 70%;
+    font-size: 1.4rem;
+    top: 85%;
     left: 50%;
+    text-align: end;
     transform: translate(-50%, -50%);
     color: black;
   }
 
   .firstContentSpan{
     background-color: rgba(0, 0, 0, 0.469);
-    background-image: linear-gradient(45deg, #ffffff, #090909f8);
+    background-image: linear-gradient(45deg, #ffffff, #817f7ff8);
     background-size: 100%;
     background-repeat: repeat;
     
