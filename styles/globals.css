@@ -258,7 +258,7 @@ body{
 
 .principalGraphics{
   padding: 10px;
-  background: #396afc;  /* fallback for old browsers */
+  background: #396afc; 
   background: -webkit-linear-gradient(to right, #c87af8, #55cdff);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #c87af8, #55cdff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
