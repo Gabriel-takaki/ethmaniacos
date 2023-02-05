@@ -1,9 +1,11 @@
 import React, { useEffect, useRef } from 'react';
-
+import { CircularProgressbar,  buildStyles } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 let tvScriptLoadingPromise;
 
 
 const Graphics = () => {
+  const percentage = 656;
 
     const onLoadScriptRef = useRef();
 
@@ -65,11 +67,11 @@ const Graphics = () => {
         
         <div className="graphics">
       
+        <h2 className='graphicTitle'>Pressione a arraste o gráfico para ver a movimentação Etherum 2022/23 </h2>
+
             <div className="principalGraphics">
             <div className='tradingview-widget-container h100'>
             <div id='tradingview_b2c58' className='h100' />
-            <div className="tradingview-widget-copyright">
-            </div>
             </div>
             </div>
 
@@ -100,19 +102,37 @@ const Graphics = () => {
 
                 <div className="thirdGraphic">
                 <div className="insideGraphic">
-                    
+                  <div className="cronometer flex">
+                    <CircularProgressbar maxValue={10000} value={percentage} text={`${percentage}K`}  styles={buildStyles({
+                       textColor: "orange",
+                       pathColor: "#c87af8",
+                        trailColor: "#068b8b"
+                         })} />;
+                  </div>
                   </div>
                 </div>
 
                 <div className="thirdGraphic">
                 <div className="insideGraphic">
-                    
+                <div className="cronometer flex">
+                    <CircularProgressbar value={percentage} text={`${percentage}%`} styles={buildStyles({
+                       textColor: "orange",
+                       pathColor: "#c87af8",
+                        trailColor: "#068b8b"
+                         })} />;
+                  </div>
                 </div>
                 </div>
 
                 <div className="thirdGraphic">
                 <div className="insideGraphic">
-                    
+                <div className="cronometer flex">
+                    <CircularProgressbar value={percentage} text={`${percentage}K`} styles={buildStyles({
+                       textColor: "orange",
+                       pathColor: "#c87af8",
+                        trailColor: "#068b8b"
+                         })} />;
+                  </div>
                   </div>
                 </div>
 
