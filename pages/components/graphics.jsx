@@ -67,13 +67,13 @@ const Graphics = () => {
         
         <div className="graphics">
       
-        <h2 className='graphicTitle'>Pressione a arraste o gráfico para ver a movimentação Etherum 2022/23 </h2>
 
             <div className="principalGraphics">
             <div className='tradingview-widget-container h100'>
             <div id='tradingview_b2c58' className='h100' />
             </div>
             </div>
+            <h2 className='graphicTitle'>Arraste o gráfico para ver a movimentação Etherum 2022/23 </h2>
 
             <div className="secondGraphics flexBetween">
                 <div className="secondGraphic">

@@ -300,6 +300,8 @@ body{
   justify-content: center;
   height: 130vh;
   background-color: #07001a;
+  background: -webkit-linear-gradient(to bottom, #000000, #07001a); 
+  background: linear-gradient(to bottom,  #000000, #07001a); 
 }
 
 .principalGraphics{
@@ -384,8 +386,191 @@ body{
 }
 
 .footer{
-  height: 50vh;
+  height: 25vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
   background-color: #07001a;
+}
+
+.socialMedia{
+  font-size: 3rem;
+  padding: 10px 0;
+}
+
+.whoweare {
+  flex-direction: column;
+  position: relative;
+  background-image: url('../public/bg1&2.webp');
+  filter: blur(0px) brightness(50%);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+
+
+.text-container {
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 50%;
+  color: white;
+  text-align: center;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+
+}
+
+
+@media screen and (max-width: 768px){
+
+
+  .ethflutuante{
+    height: 18%;
+    top: 15vh;
+    left: 44%;
+  }
+
+  .firstContent{
+    width: 85%;
+    font-size: 1.2rem;
+    top: 40%;
+    left: 5%;
+    text-align: initial;
+    color: black;
+  }
+
+  
+  .youtubeButton{
+    padding: 10px 20px;
+    font-size: 0.7rem;
+    width: 45%;
+    margin-left: 55%;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+    .navBar{
+      background-color: #000000c8;
+    }
+
+    .menuHamburguer{
+      display: flex;
+    }
+
+  .links{
+    display: none;
+  }
+
+  .cuboFlutuante2_5{
+    display: flex;
+    position: absolute;
+    top: 130vh;
+    right: 10%;
+    transform: rotateY(180deg);
+    width: auto;
+    height:20%;
+    animation: float2 4s ease-in-out infinite;
+    filter: drop-shadow(5px 5px 5px #222);
+   
+    -webkit-filter: blur(4px);
+    -moz-filter: blur(4px);
+    -o-filter: blur(4px);
+    -ms-filter: blur(4px);
+    filter: blur(3px);
+  }
+
+  .carroussel{
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    top: 100vh;
+    background-color: rgba(0, 0, 0, 0.241);
+    margin: 0;
+  }
+
+  .carouselContent{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cuboFlutuante3{
+    display: none;
+  }
+
+  .graphicTitle{
+    text-align: center;
+    font-size: 0.7rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .principalGraphics{
+    width: 90%;
+    padding: 7px;
+  }
+
+  .secondGraphics{
+    flex-direction: column;
+    display: flex;
+    width: 90%;
+    height: 40%;
+  }
+
+ 
+
+  .secondGraphic{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 16px;
+  }
+
+  .thirdGraphics{
+    display: flex;
+    width: 90%;
+    height: 50%;
+    overflow: auto;
+    padding-left: 24px;
+  }
+
+  .thirdGraphics::-webkit-scrollbar {
+    width: 20px;
+  
+  }
+
+  .cronometer{
+    width: 50%;
+  }
+
+  .thirdGraphic{
+    min-width: 80%;
+    margin-right: 16px;
+    height: 100%;
+  }
+
+  .text-container {
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 70%;
+    color: white;
+    text-align: center;
+  }
 }
 
 @keyframes pinkBackground {
@@ -532,146 +717,4 @@ body{
   to {
     color: #c87af8;
   }
-}
-
-
-
-::-webkit-scrollbar {
-  width: 0px;
-
-}
-
-
-@media screen and (max-width: 768px){
-
-
-  .ethflutuante{
-    height: 18%;
-    top: 15vh;
-    left: 44%;
-  }
-
-  .firstContent{
-    width: 85%;
-    font-size: 1.2rem;
-    top: 40%;
-    left: 5%;
-    text-align: initial;
-    color: black;
-  }
-
-  
-  .youtubeButton{
-    padding: 10px 20px;
-    font-size: 0.7rem;
-    width: 45%;
-    margin-left: 55%;
-    font-weight: 600;
-    cursor: pointer;
-    text-decoration: none;
-  }
-
-    .navBar{
-      background-color: #000000c8;
-    }
-
-    .menuHamburguer{
-      display: flex;
-    }
-
-  .links{
-    display: none;
-  }
-
-  .cuboFlutuante2_5{
-    display: flex;
-    position: absolute;
-    top: 130vh;
-    right: 10%;
-    transform: rotateY(180deg);
-    width: auto;
-    height:20%;
-    animation: float2 4s ease-in-out infinite;
-    filter: drop-shadow(5px 5px 5px #222);
-   
-    -webkit-filter: blur(4px);
-    -moz-filter: blur(4px);
-    -o-filter: blur(4px);
-    -ms-filter: blur(4px);
-    filter: blur(3px);
-  }
-
-  .carroussel{
-    z-index: 100;
-    width: 100%;
-    height: 100%;
-    top: 100vh;
-    background-color: rgba(0, 0, 0, 0.241);
-    margin: 0;
-  }
-
-  .carouselContent{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .cuboFlutuante3{
-    display: none;
-  }
-
-  .graphicTitle{
-    text-align: center;
-    font-size: 0.7rem;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-
-  .principalGraphics{
-    width: 90%;
-    padding: 7px;
-  }
-
-  .secondGraphics{
-    flex-direction: column;
-    display: flex;
-    width: 90%;
-    height: 40%;
-  }
-
- 
-
-  .secondGraphic{
-    width: 100%;
-    height: 100%;
-    margin-bottom: 16px;
-  }
-
-  .thirdGraphics{
-    display: flex;
-    width: 90%;
-    height: 50%;
-    overflow: auto;
-    padding-left: 24px;
-  }
-
-  .thirdGraphics::-webkit-scrollbar {
-    width: 20px;
-  
-  }
-
-  .cronometer{
-    width: 50%;
-  }
-
-  .thirdGraphic{
-    min-width: 80%;
-    margin-right: 16px;
-    height: 100%;
-  }
-
 }
