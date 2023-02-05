@@ -7,8 +7,18 @@ const Graphics = () => {
 
     const onLoadScriptRef = useRef();
 
+    const fetchData = async () => {
+      const res = await window.fetch("https://data.messari.io/api/v1/assets/eth/metrics");
+      const messariRes = await res.json();
+      const payload = messariRes.data;
+      console.log(payload);
+    };
+
   useEffect(
-    () => {
+    
+     () => {
+      fetchData()
+
       onLoadScriptRef.current = createWidget;
 
       if (!tvScriptLoadingPromise) {
@@ -63,28 +73,49 @@ const Graphics = () => {
             </div>
             </div>
 
-            <div className="secondGraphics">
-                <div className="second1">
-
+            <div className="secondGraphics flexBetween">
+                <div className="secondGraphic">
+                  <div className="insideGraphic">
+                    <span className='orangeSpan'>33</span>
+                    <span className='blueSpan'>GWEI</span>
+                  </div>
                 </div>
-                <div className="second2">
 
+                <div className="secondGraphic">
+                <div className="insideGraphic">
+                <span className='secondOrangeSpan'>-7,353,78</span>
+                    <span className='blueSpan'>ETH</span>
+                  </div>
                 </div>
-                <div className="second3">
 
+                <div className="secondGraphic">
+                 <div className="insideGraphic">
+                 <span className='orangeSpan'>33</span>
+                    <span className='blueSpan'>ETH</span>
+                  </div>
                 </div>
             </div>
 
-            <div className="thirdGraphics">
-                <div className="third1">
+            <div className="thirdGraphics flexBetween">
 
+                <div className="thirdGraphic">
+                <div className="insideGraphic">
+                    
+                  </div>
                 </div>
-                <div className="third2">
 
-                </div>
-                <div className="third3">
+                <div className="thirdGraphic">
+                <div className="insideGraphic">
                     
                 </div>
+                </div>
+
+                <div className="thirdGraphic">
+                <div className="insideGraphic">
+                    
+                  </div>
+                </div>
+
             </div>
         </div>
 

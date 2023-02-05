@@ -46,9 +46,11 @@ const NavBar = () => {
           INÍCIO
         </a>
         <a href="#aboutEth" className="linksi">
-          O ETHERIUM
+          O ETHERUM
         </a>
-        <span className="linksi">GRÁFICOS</span>
+        <a href="#graphics" className="linksi">
+          MÉTRICAS
+        </a>
         <span className="linksi">NOTÍCIAS</span>
         <span className="linksi">ETHEXPERT</span>
       </div>

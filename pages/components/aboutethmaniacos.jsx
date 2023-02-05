@@ -1,5 +1,4 @@
 import React from "react";
-import bg2Desktop from "public/bg2Desk.webp";
 import Image from "next/image";
 import cuboGrandeFlutuante from 'public/cuboGrandeFlutuante.webp';
 import bg1Desktop from "public/bg1&2.webp";
@@ -30,6 +29,11 @@ const AboutEthManiacos = () => {
             />
 
             <Image 
+            className="cuboFlutuante2_5"
+            src={cuboGrandeFlutuante}
+            />
+
+            <Image 
             className="cuboFlutuante3"
             src={cuboGrandeFlutuante}
             />
@@ -39,26 +43,29 @@ const AboutEthManiacos = () => {
    
             
             <div className="carroussel">
-            {/* <h2 className="blackfont">My Photo Gallery</h2> */}
-                {/* <Carousel autoPlay interval="5000" transitionTime="5000" infiniteLoop>
-                    <div>
-                        <img src="" alt="asd" />
-                     
-                         <p>lalallalalal</p>
+                <div></div>
+                <Carousel showStatus={false} showArrows={false} showIndicators={false} dynamicHeight autoPlay interval="7000" transitionTime="3000" infiniteLoop >
+                    <div className="carouselContent">
+                        <h1>WEB 3.0 - O ÍNICIO</h1>
+                         <p>Em vez de uma Web monoplizada por grandes empresas de tecnologia, a Web3 adota a descentralização e está sendo construida e operada, pasmem, como propriedade de seus usuários,</p>
+                         <br />
+                         <p>Como ? usando a rede Ethereium !</p>
                     </div>
-                    <div>
-                        <p className="legend">My Photo 2</p>
+                    <div className="carouselContent">
+                        <h1>VITALIK: O CRIADOR</h1>
+                        <p>No final de 2013 vitalic Buterin, publicou seu white paper descrevendo a ideia do etherium, em janeiro de 2014 o Etherum foi anunciado pela primeira vez na the n </p>
+                        <br />
+                        <p>Como ? usando a rede Ethereium !</p>
+
                     </div>
-                    <div>
-                        <p className="legend">My Photo 3</p>
+                    <div className="carouselContent">
+                        <h1>VITALIK: O CRIADOR</h1>
+                        <p>No final de 2013 vitalic Buterin, publicou seu white paper descrevendo a ideia do etherium, em janeiro de 2014 o Etherum foi anunciado pela primeira vez na the n </p>
+                        <br />
+                        <p>Como ? usando a rede Ethereium !</p>
                     </div>
-                    <div>
-                        <p className="legend">My Photo 4</p>
-                    </div>
-                    <div>
-                        <p className="legend">My Photo 5</p>
-                    </div>
-                </Carousel> */}
+                </Carousel>
+                <div></div>
             </div>
          
         </div>

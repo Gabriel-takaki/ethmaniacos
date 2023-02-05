@@ -4,13 +4,10 @@ import React from "react";
 
 const Footer = () => {
     return (
-        <div className="home">
+        <div className="footer flex">
             {/* <video className="firstVideo" src={bg2} autoPlay loop muted ></video> */}
-
-            <div className="firstContent">
-                 {/* {{Content}} */}
-                 <span className="firstContentSpan">"A revolução industrial permitiu-nos, <br /> pela primeira vez, começar a substituir o <br /> trabalho humano por máquinas."</span>
-            </div>
+            <span>Footer em breve também</span>
+        
         </div>
 
         

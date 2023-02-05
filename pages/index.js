@@ -6,6 +6,8 @@ import NavBar from './components/navbar'
 import Hero from './components/hero'
 import AboutEthManiacos from './components/aboutethmaniacos'
 import Graphics from './components/graphics'
+import WhoWeAre from './components/whoweare'
+import Footer from './components/footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -40,6 +42,16 @@ export default function Home() {
       <div id='graphics'>
         <Graphics/>
       </div>
+
+      <div id='whoweare'>
+        <WhoWeAre/>
+      </div>
+
+
+      <div id='footer'>
+        <Footer/>
+      </div>
+
 
     </>
   )
