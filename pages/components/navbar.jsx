@@ -51,8 +51,9 @@ const NavBar = () => {
         <a href="#graphics" className="linksi">
           MÉTRICAS
         </a>
-        <span className="linksi">NOTÍCIAS</span>
-        <span className="linksi">ETHEXPERT</span>
+        <a href="#whoweare" className="linksi">
+          QUEM SOMOS
+        </a>
       </div>
 
       <div className="flexBetween ethnavprice">
@@ -61,10 +62,9 @@ const NavBar = () => {
                 alt="ETH logo"
                 className="ethIconeNavPrice"
                 />
-        <span style={myStyles} >{btcValue} USD</span>
+        <span style={myStyles} > {btcValue} USD</span>
       </div>
 
-    <AiOutlineMenu className="menuHamburguer"/>
 
     </nav>
   );

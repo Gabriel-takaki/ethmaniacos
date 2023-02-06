@@ -21,16 +21,19 @@ const Hero = () => {
             src={ethFlutuante}
             />
 
+        <a href="#aboutEth">
+
           <Image 
             className="setaScroll"
             src={setaScroll}
             />
+            </a>
 
          
 
             <div className="firstContent">
                  {/* {{Content}} */}
-                 <span className="firstContentSpan">"A revolução industrial permitiu-nos, <br /> pela primeira vez, começar a substituir o <br /> trabalho humano por máquinas." <br /> <span style={{fontSize: '1rem'}}>- Agostinho carrara </span> </span>
+                 <span className="firstContentSpan">"A revolução industrial permitiu-nos, <br /> pela primeira vez, começar a substituir o <br /> trabalho humano por máquinas." <br /> <span style={{fontSize: '1rem'}}>- Vitalik Buterin </span> </span>
 
                 <a target="_blank" href="https://www.youtube.com/@ethmaniacos/playlists">
                  <button className="youtubeButton flexBetween"> <AiOutlineYoutube className="ytIcon" /> Ethmaniacos no YouTube</button>
