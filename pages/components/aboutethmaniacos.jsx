@@ -44,7 +44,7 @@ const AboutEthManiacos = () => {
             
             <div className="carroussel">
                 <div></div>
-                <Carousel showStatus={false} showArrows={false} showIndicators={false} dynamicHeight autoPlay interval="7000" transitionTime="3000" infiniteLoop >
+                <Carousel showStatus={false} showArrows={false} showIndicators={false} dynamicHeight autoPlay interval="5000" transitionTime="3000" infiniteLoop >
                     <div className="carouselContent">
                         <h1>WEB 3.0 - O ÍNICIO</h1>
                          <p>Em vez de uma Web monoplizada por grandes empresas de tecnologia, a Web3 adota a descentralização e está sendo construida e operada, pasmem, como propriedade de seus usuários,</p>
