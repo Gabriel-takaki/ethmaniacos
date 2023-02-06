@@ -612,6 +612,12 @@ body{
     color: white;
     text-align: center;
   }
+
+  .h1typewriter{
+
+    font-size: 1rem;
+    
+  }
 }
 
 @keyframes typing {

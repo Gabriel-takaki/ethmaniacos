@@ -21,7 +21,7 @@ const WhoWeAre = () => {
             <span>Para nós o e etherum não é apenas uma plataforma de investimento <br /> é o futuro da tecnologia </span>
             <p>Nosso objetivo é enxergar e agarrar todas as oportunidades dentro deste momento único e histórico onde a sociedade se divide em</p>
             <div class="typewriter">
-            <h1>Antes e depois do Etherum...</h1>
+            <h1 className="h1typewriter">Antes e depois do Etherum...</h1>
             </div>
           </div>
 
