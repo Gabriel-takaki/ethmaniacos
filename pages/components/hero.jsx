@@ -46,7 +46,7 @@ const Hero = () => {
 
             <div className="firstContent">
                  {/* {{Content}} */}
-                 <span className="firstContentSpan">"O banco Central perfeito está sendo criado <br /> na nossa frente !<br /> Entenda o que está acontecendo no  <br /> Ethereum e aproveite as oportunidades !" <br /> </span>
+                 <span className="firstContentSpan">O Banco Central perfeito está sendo criado <br /> na nossa frente !<br /> Entenda o que está acontecendo no  <br /> Ethereum e aproveite as oportunidades ! <br /> </span>
 
                 <a target="_blank" href="https://www.youtube.com/@ethmaniacos/playlists">
                  <button className="youtubeButton flexBetween"> <AiOutlineYoutube className="ytIcon" /> Ethmaniacos no YouTube</button>
