@@ -2,17 +2,18 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import logoNavBar from "public/logonavbar.webp"
 import ethIcone from "public/ethicone.webp"
-import { AiOutlineMenu } from "react-icons/ai";
+import axios from "axios";
 
 const NavBar = () => {
   const [navBarOpen, setNavBarOpen] = useState(false);
   const [btcValue, setBtcValue] = useState("");
   const [ethPricePink, setEthPricePink] = useState(false);
-  
+  const [gasPrice, setGasPrice] = useState("");
+
   const myStyles = {
     color: ethPricePink ? "#c87af8" : "white"
   };
-  
+
   useEffect(() => {
     const fetchData = async () => {
       const res = await window.fetch("https://data.messari.io/api/v1/assets/eth/metrics");
@@ -21,6 +22,15 @@ const NavBar = () => {
       console.log(payload);
       setBtcValue(`${payload.market_data.price_usd.toLocaleString()}`);
       setEthPricePink(prevState => !prevState );
+
+    // await axios.get(`https://api.etherscan.io/api?module=gastrackeraction=gasoracle&apikey=2UGKWJAH19UZ1AKMXQQNJBC6A85VJNQNH8`).then((res) => {
+    //   console.log(res);
+    // })
+    // console.log(response.data);
+      // const ethGasStationRes = await secondres.json();
+      // console.log(ethGasStationRes)
+      // setGasPrice(ethGasStationRes.average / 10);
+      // console.log(ethGasStationRes);
     };
   
     fetchData();
@@ -62,7 +72,7 @@ const NavBar = () => {
                 alt="ETH logo"
                 className="ethIconeNavPrice"
                 />
-        <span style={myStyles} > {btcValue} USD</span>
+        <span style={myStyles} > {btcValue} USD {gasPrice}</span>
       </div>
 
 

@@ -61,7 +61,7 @@ body{
   font-size: 80%;
   cursor: pointer;
   font-style: italic;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ;
 }
 
 .linksi:hover{
@@ -94,17 +94,42 @@ body{
 }
 
 
-.ethflutuante{
+.animationEtherumHero{
   position: absolute;
-  top: 28%;
-  left: 26%;
-  width: auto;
-  filter: drop-shadow(10px 10px 10px rgb(0, 0, 0)) ;
-  height:45%;
-  animation-delay: 2s;
-  animation: ethflutuante 4s ease-in-out infinite;
+  top: 25%;
+  left: 23%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /* overflow: hidden; */
+  justify-content: center;
+  z-index: 1;
+  height: 25%;
+  width: 20vh;
+  /* background-color: red; */
 }
 
+.etherumdiv{
+  animation: grow 2s ; 
+}
+
+.etherum{
+  margin-top: 3vh;
+  width: 75%;
+  z-index: 1;
+  height: auto;
+  animation: float 2s ease-in-out infinite;
+  filter: drop-shadow(5px 5px 5px #000000);
+}
+
+.baseetherum{
+  top: -1vh;
+  position: absolute;
+  width: 200%;
+  filter: drop-shadow(5px 5px 5px #000000);
+  height: auto;
+  animation: hide 2s ; 
+}
 
 .setaScroll{
   position: absolute;
@@ -120,15 +145,23 @@ body{
 .bg1ToDesktop{
   width: 100%;
   height: 100%;
-    
   filter: brightness(50%) opacity(90%) ;
 }
 
+.player{
+  position: absolute;
+  bottom: -5vh;
+  left: -0vh;
+  background-color: #000;
+  filter: drop-shadow(5px 5px 5px #000000);
+  z-index: 100;
+}
 
 .firstContent{
   position: absolute;
-  right: 10%;
+  right: 5%;
   top: 37%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -137,7 +170,7 @@ body{
 
 .firstContentSpan{
   background-color: rgba(234, 0, 255, 0.469);
-  background-image: linear-gradient(45deg, #ffffff, #28252656);
+  background-image: linear-gradient(45deg, #ffffff, #28252690);
   background-size: 100%;
   background-repeat: repeat;
   transition: 1s;
@@ -157,9 +190,9 @@ body{
   border: none;
   box-shadow: #000000;
   border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 0.8rem;
-  width: 45%;
+  padding: 16px 20px;
+  font-size: 0.9rem;
+  width: 40%;
   font-weight: 600;
   cursor: pointer;
   transition: 2s;
@@ -465,12 +498,40 @@ body{
 
 @media screen and (max-width: 768px){
 
+.animationEtherumHero{
+  position: absolute;
+  top: 12%;
+  left: 40%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /* overflow: hidden; */
+  justify-content: center;
+  z-index: 1;
+  height: 10rem;
+  width: 13vh;
+  /* background-color: red; */
+}
 
-  .ethflutuante{
-    height: 18%;
-    left: 42%;
-    top: 15vh;
-  }
+.etherumdiv{
+  animation: grow 2s ; 
+}
+
+.etherum{
+  width: 70%;
+  height: auto;
+  animation: float 2s ease-in-out infinite;
+  filter: drop-shadow(5px 5px 5px #000000);
+}
+
+.baseetherum{
+  top: 6vh;
+  position: absolute;
+  width: 170%;
+  filter: drop-shadow(5px 5px 5px #000000);
+  height: auto;
+  animation: hideon 2s ; 
+}
 
   .firstContent{
     width: 100%;
@@ -482,7 +543,7 @@ body{
     display: flex;
     align-items: center;
     font-size: 1.2rem;
-    top: 45%;
+    top: 50%;
     color: black;
   }
 
@@ -615,6 +676,15 @@ body{
 
   .h1typewriter{
     font-size: 1rem;
+  }
+}
+
+@keyframes grow{
+  0%{
+    transform: scale(0);
+  }
+  100%{
+    transform: scale(1);
   }
 }
 
