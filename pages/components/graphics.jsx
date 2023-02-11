@@ -73,7 +73,7 @@ const Graphics = () => {
             <div id='tradingview_b2c58' className='h100' />
             </div>
             </div>
-            <h2 className='graphicTitle'>Arraste o gráfico para ver a movimentação Etherum 2022/23 </h2>
+            <h2 className='graphicTitle'>Arraste o gráfico para ver a movimentação Ethereum 2022/23 </h2>
 
             <div className="secondGraphics flexBetween">
                 <div className="secondGraphic">

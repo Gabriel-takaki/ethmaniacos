@@ -5,6 +5,7 @@ import bg1Desktop from "public/bg1&2.webp";
 import ReactDOM from 'react-dom';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
+import malhaethmaniacos from "public/malhaethmaniacos.webp";
 
 // import ethflutuante from "../assets/ethflutuante.png";
 
@@ -18,26 +19,18 @@ const AboutEthManiacos = () => {
             />
 
 
-            <Image 
-            className="cuboFlutuante1"
-            src={cuboGrandeFlutuante}
+
+        <Image 
+            className="malhaflutuante1"
+            src={malhaethmaniacos}
             />
 
             <Image 
-            className="cuboFlutuante2"
-            src={cuboGrandeFlutuante}
+            className="malhaflutuante2"
+            src={malhaethmaniacos}
             />
 
-            <Image 
-            className="cuboFlutuante2_5"
-            src={cuboGrandeFlutuante}
-            />
-
-            <Image 
-            className="cuboFlutuante3"
-            src={cuboGrandeFlutuante}
-            />
-          
+         
 
 
    
