@@ -42,20 +42,20 @@ const AboutEthManiacos = () => {
                         <h1>WEB 3.0 - O ÍNICIO</h1>
                          <p>Em vez de uma Web monoplizada por grandes empresas de tecnologia, a Web3 adota a descentralização e está sendo construida e operada, pasmem, como propriedade de seus usuários,</p>
                          <br />
-                         <p>Como ? usando a rede Ethereium !</p>
+                         <p>Como ? usando a rede Ethereum !</p>
                     </div>
                     <div className="carouselContent">
                         <h1>VITALIK: O CRIADOR</h1>
-                        <p>No final de 2013 vitalic Buterin, publicou seu white paper descrevendo a ideia do etherium, em janeiro de 2014 o Etherum foi anunciado pela primeira vez na the n </p>
+                        <p>No final de 2013 vitalic Buterin, publicou seu white paper descrevendo a ideia do ethereum, em janeiro de 2014 o Etherum foi anunciado pela primeira vez na the n </p>
                         <br />
-                        <p>Como ? usando a rede Ethereium !</p>
+                        <p>Como ? usando a rede Ethereum !</p>
 
                     </div>
                     <div className="carouselContent">
                         <h1>VITALIK: O CRIADOR</h1>
-                        <p>No final de 2013 vitalic Buterin, publicou seu white paper descrevendo a ideia do etherium, em janeiro de 2014 o Etherum foi anunciado pela primeira vez na the n </p>
+                        <p>No final de 2013 vitalic Buterin, publicou seu white paper descrevendo a ideia do ethereum, em janeiro de 2014 o Etherum foi anunciado pela primeira vez na the n </p>
                         <br />
-                        <p>Como ? usando a rede Ethereium !</p>
+                        <p>Como ? usando a rede Ethereum !</p>
                     </div>
                 </Carousel>
                 <div></div>

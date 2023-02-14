@@ -89,14 +89,15 @@ const NavBar = () => {
       </div>
 
       <div className="flex ethnavprice">
+      <span className="ethGas flex" style={myStyles} > <span className="gasIcon ethIconeNavPrice"> 
+           <FaGasPump/> </span> {gasPrice}</span>
             <Image
                 src={ethIcone}
                 alt="ETH logo"
                 className="ethIconeNavPrice"
                 />
         <span style={myStyles} > {btcValue} USD </span>
-        <span className="ethGas flex" style={myStyles} > <span className="gasIcon ethIconeNavPrice"> 
-           <FaGasPump/> </span> {gasPrice}</span>
+        
       </div>
 
 
