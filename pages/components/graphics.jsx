@@ -5,10 +5,10 @@ import {FaGasPump} from "react-icons/fa";
 
 
 
-const ReactSpeedometer = dynamic(
-  () => import('react-d3-speedometer'),
-  { ssr: false },
-);
+// const ReactSpeedometer = dynamic(
+//   () => import('react-d3-speedometer'),
+//   { ssr: false },
+// );
 
 const Graphics = () => {
 const [gasPrice, setGasPrice] = useState("");
@@ -136,7 +136,7 @@ const [suplyPrice, setSuplyPrice] = useState("");
 
         <div className="thirdGraphic">
           <div className="insideGraphic">
-            <ReactSpeedometer
+            {/* <ReactSpeedometer
               maxSegmentLabels={0}
               value={33}
               maxValue={100}
@@ -149,13 +149,13 @@ const [suplyPrice, setSuplyPrice] = useState("");
               endColor={'#55cdff'}
               needleColor="#fff"
               textColor={'#fff'}
-            />
+            /> */}
           </div>
         </div>
 
         <div className="thirdGraphic">
           <div className="insideGraphic">
-            <ReactSpeedometer
+            {/* <ReactSpeedometer
               className='speedometer'
               maxSegmentLabels={0}
               value={33}
@@ -172,7 +172,7 @@ const [suplyPrice, setSuplyPrice] = useState("");
               endColor={'red'}
               needleColor="#fff"
               textColor={'#fff'}
-            />
+            /> */}
 
           </div>
         </div>
@@ -180,7 +180,7 @@ const [suplyPrice, setSuplyPrice] = useState("");
         <div className="thirdGraphic">
           <div className="insideGraphic">
 
-            <ReactSpeedometer
+            {/* <ReactSpeedometer
               className='speedometer'
               maxSegmentLabels={0}
               value={33}
@@ -197,7 +197,7 @@ const [suplyPrice, setSuplyPrice] = useState("");
               endColor={'white'}
               needleColor="#fff"
               textColor={'#fff'}
-            />
+            /> */}
 
           </div>
         </div>
