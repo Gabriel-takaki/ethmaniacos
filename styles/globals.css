@@ -82,7 +82,8 @@ body{
 }
 
 .ethIconeNavPrice{
-  height: 80%;
+  height: 60%;
+  /*  */
   margin-left: 16px;
   margin-right: 2px;
   width: auto;
