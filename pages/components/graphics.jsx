@@ -1,6 +1,9 @@
-import React, { useEffect, useRef } from 'react';
+import React, {useState, useEffect, useRef,  } from 'react';
 import dynamic from 'next/dynamic';
 let tvScriptLoadingPromise;
+import {FaGasPump} from "react-icons/fa";
+
+
 
 const ReactSpeedometer = dynamic(
   () => import('react-d3-speedometer'),
@@ -8,22 +11,47 @@ const ReactSpeedometer = dynamic(
 );
 
 const Graphics = () => {
+const [gasPrice, setGasPrice] = useState("");
+const [suplyPrice, setSuplyPrice] = useState("");
+
   const percentage = 656;
 
   const onLoadScriptRef = useRef();
 
-  const fetchData = async () => {
+
+  const fetchGasPrice = async () => {
+    const res = await window.fetch("https://api.etherscan.io/api?module=gastracker&action=gasoracle&apikey=2UGKWJAH19UZ1AKMXQQNJBC6A85VJNQNH8")
+    const etherscanRes = await res.json();
+    const payload = etherscanRes.result;
+    setGasPrice(`${payload.ProposeGasPrice}`);
+  };
+
+  const fetchDataGraphic = async () => {
     const res = await window.fetch("https://data.messari.io/api/v1/assets/eth/metrics");
     const messariRes = await res.json();
     const payload = messariRes.data;
     console.log(payload);
   };
 
+  const fetchSuply = async () => {
+    const res = await window.fetch("https://api.etherscan.io/api?module=stats&action=ethsupply&apikey=2UGKWJAH19UZ1AKMXQQNJBC6A85VJNQNH8")
+    const etherscanRes = await res.json();
+    const payload = etherscanRes.result;
+    const etherValue = (Number(payload) / 10 ** 18).toFixed(2);
+    setSuplyPrice(`${etherValue}`);
+  }
+  useEffect(() => {
+    const intervalId = setInterval(fetchGasPrice, 12000);
+    return () => clearInterval(intervalId);
+  }, []);
+  
+
   useEffect(
 
     () => {
-      fetchData()
-
+      fetchDataGraphic()
+      fetchGasPrice();
+      fetchSuply();
       onLoadScriptRef.current = createWidget;
 
       if (!tvScriptLoadingPromise) {
@@ -63,6 +91,7 @@ const Graphics = () => {
         }
       }
     },
+
     []
   );
   return (
@@ -81,21 +110,22 @@ const Graphics = () => {
       <div className="secondGraphics flexBetween">
 
         <div className="secondGraphic">
-          <div className="insideGraphic">
-            <span className='orangeSpan'>33</span>
+          <div className="insideSecondGraphic">
+            <span className='orangeSpan'>{gasPrice}</span>
             <span className='blueSpan'>GWEI</span>
+            <FaGasPump className='gasGraphic' />
           </div>
         </div>
 
         <div className="secondGraphic">
-          <div className="insideGraphic">
-            <span className='secondOrangeSpan'>-7,353,78</span>
+          <div className="insideSecondGraphic" style={{'flexDirection': 'column'}}>
+            <span className='secondOrangeSpan'>{suplyPrice}</span>
             <span className='blueSpan'>ETH</span>
           </div>
         </div>
 
         <div className="secondGraphic">
-          <div className="insideGraphic">
+          <div className="insideSecondGraphic">
             <span className='orangeSpan'>33</span>
             <span className='blueSpan'>ETH</span>
           </div>

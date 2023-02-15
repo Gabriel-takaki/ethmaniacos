@@ -15,30 +15,15 @@ const NavBar = () => {
     color: ethPricePink ? "#c87af8" : "white"
   };
 
-  const makeInfuraRequest = () => {
-    const requestOptions = {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        jsonrpc: '2.0',
-        method: 'eth_blockNumber',
-        params: [],
-        id: 1
-      })
-    };
-    fetch('https://mainnet.infura.io/v3/3d6f1e85b11d463391f25cf1c9df06de', requestOptions)
-      .then(res => res.json())
-      .then(payload => {
-        console.log(payload)
-        // const gasPrice = parseInt(payload.result, 16) / 1e9;
-        const gasPrice = parseInt(payload.result, 16)
-        let rounded = gasPrice.toFixed(0);
-        let value = Math.floor(rounded / 1000000)
-        // let rounded = (gasPrice % 1 < 0.5) ? Math.floor(gasPrice) : Math.ceil(gasPrice);
-      setGasPrice(value);
-      })
-      .catch(error => console.error(error));
+ 
+  const fetchGasPrice = async () => {
+    const res = await window.fetch("https://api.etherscan.io/api?module=gastracker&action=gasoracle&apikey=2UGKWJAH19UZ1AKMXQQNJBC6A85VJNQNH8")
+    const etherscanRes = await res.json();
+    const payload = etherscanRes.result;
+    setGasPrice(`${payload.ProposeGasPrice}`);
   };
+
+ 
   
   const fetchData = async () => {
     const res = await window.fetch("https://data.messari.io/api/v1/assets/eth/metrics");
@@ -48,17 +33,23 @@ const NavBar = () => {
     setBtcValue(`${payload.market_data.price_usd.toLocaleString()}`);
     setEthPricePink(prevState => !prevState );
   };
-  
+
+ 
   useEffect(() => {
-    const intervalId = setInterval(makeInfuraRequest, 1500);
+    const intervalId = setInterval(fetchGasPrice, 12000);
     return () => clearInterval(intervalId);
   }, []);
   
   useEffect(() => {
-    const intervalId = setInterval(fetchData, 1500);
+    const intervalId = setInterval(fetchData, 12000);
     return () => clearInterval(intervalId);
   }, []);
   
+   useEffect(() => {
+    fetchData();
+    fetchGasPrice();
+  }, []);
+
   
   return (
     <nav className="navBar flexBetween full-width">
@@ -96,7 +87,7 @@ const NavBar = () => {
                 alt="ETH logo"
                 className="ethIconeNavPrice"
                 />
-        <span style={myStyles} > {btcValue} USD </span>
+        <span className="flex" style={myStyles} > {btcValue} USD </span>
         
       </div>
 
