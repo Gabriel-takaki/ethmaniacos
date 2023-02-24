@@ -6,10 +6,10 @@ import {ImDroplet} from "react-icons/im";
 import {AiFillFire} from "react-icons/ai"
 import {TfiWorld} from "react-icons/ti"
 import {TbWorld} from "react-icons/tb"
-// const ReactSpeedometer = dynamic(
-//   () => import('react-d3-speedometer'),
-//   { ssr: false },
-// );
+const ReactSpeedometer = dynamic(
+  () => import('react-d3-speedometer'),
+  { ssr: false },
+);
 
 const Graphics = () => {
 
@@ -121,6 +121,7 @@ const [suplyPrice, setSuplyPrice] = useState("");
   nrOfLevels={20} 
   percent={0.86} 
 /> */}
+
       </div>
 
       <div className="thirdGraphicsDiv">
