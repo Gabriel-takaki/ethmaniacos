@@ -13,7 +13,7 @@ import {TbWorld} from "react-icons/tb"
 
 const Graphics = () => {
 
-  const GaugeChart = dynamic(() => import('react-gauge-chart'), { ssr: false });
+  // const GaugeChart = dynamic(() => import('react-gauge-chart'), { ssr: false });
 
 const [gasPrice, setGasPrice] = useState("");
 const [suplyPrice, setSuplyPrice] = useState("");
@@ -116,11 +116,11 @@ const [suplyPrice, setSuplyPrice] = useState("");
 
     <div className="secondGraphicsDiv">
       <div className="burnDiv">
-
+{/* 
       <GaugeChart id="gauge-chart2" 
   nrOfLevels={20} 
   percent={0.86} 
-/>
+/> */}
       </div>
 
       <div className="thirdGraphicsDiv">
