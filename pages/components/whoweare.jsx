@@ -3,8 +3,6 @@ import React from "react";
 // import Content from "./content";
 import Image from "next/image";
 import bg1Desktop from "public/bg1&2.webp";
-import Crawl from 'react-star-wars-crawl'
-import 'react-star-wars-crawl/lib/index.css'
 
 const WhoWeAre = () => {
     return (

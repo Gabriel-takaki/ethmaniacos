@@ -6,14 +6,12 @@ import {ImDroplet} from "react-icons/im";
 import {AiFillFire} from "react-icons/ai"
 import {TfiWorld} from "react-icons/ti"
 import {TbWorld} from "react-icons/tb"
-const ReactSpeedometer = dynamic(
-  () => import('react-d3-speedometer'),
-  { ssr: false },
-);
+import Gauge from './Gauge';
+
+
 
 const Graphics = () => {
 
-  // const GaugeChart = dynamic(() => import('react-gauge-chart'), { ssr: false });
 
 const [gasPrice, setGasPrice] = useState("");
 const [suplyPrice, setSuplyPrice] = useState("");
@@ -115,19 +113,26 @@ const [suplyPrice, setSuplyPrice] = useState("");
 
 
     <div className="secondGraphicsDiv">
-      <div className="burnDiv">
-{/* 
-      <GaugeChart id="gauge-chart2" 
-  nrOfLevels={20} 
-  percent={0.86} 
-/> */}
+      <div className="burnDiv flex">
+      <Gauge value={gasPrice} />
 
+      <div className="flex" style={{paddingTop: '30px'}}>
+        <span className='burnSpan'>GWEI</span>
+      <AiFillFire className='burnIcon'/>
+
+      </div>
       </div>
 
       <div className="thirdGraphicsDiv">
-        <div className="insideThird" style={{marginBottom:'10px'}}>
+        <div className="insideThird supplyDiv " style={{marginBottom:'10px'}}>
+
+      <div className='box1'></div>
+      <span className='supplySpan'>Total Supply {suplyPrice}</span>
+
 
         </div>
+
+
         <div className="insideThird">
           
           </div>

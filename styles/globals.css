@@ -99,6 +99,7 @@ body{
 
 
 
+
 .gasIcon{
   color: orange;
   margin: 0px 8px;
@@ -333,16 +334,16 @@ body{
   justify-content: center;
   height: 120vh;
   padding: 30px 0;
-  background: linear-gradient(179deg, #090512, #19062c, #1f081d);
-  background-size: 1000% 1000%;
-  -webkit-animation: bgGraphics 10s ease infinite;
-  -moz-animation: bgGraphics 10s ease infinite;
-  animation: bgGraphics 10s ease infinite;
+  background: linear-gradient(270deg, #9d13dd, #000000, #007b88);
+  background-size: 600% 600%;
+  -webkit-animation: AnimationName 18s ease infinite;
+  -moz-animation: AnimationName 18s ease infinite;
+  animation: AnimationName 18s ease infinite;
 }
 
 .principalGraphics{
   padding: 10px;
-  background-color: #171717;
+  background-color: #000000c9;
   width: 70%;
   height: 43%;
   border-radius: 16px;
@@ -352,6 +353,42 @@ body{
   height: 100%;
   padding: 5px;
 }
+
+.burnIcon{
+  font-size: 2rem;
+animation: rotate 3.5s ease-in-out infinite;
+color: rgb(255, 128, 0);
+}
+
+.burnSpan{
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: rgb(255, 128, 0);
+}
+
+.box1{
+  background:url(https://i.imgur.com/bYSnuNE.jpg?1);
+  background-size:cover;
+  border:2px solid #000;
+  border-radius:50%;
+  width:70px;
+  height:70px;
+  animation: movimiento 5s linear 0s infinite;
+  box-shadow:0 0 25px RGBA(255,255,255, 0.10),
+             -8px -8px 15px #000 inset,
+             2px 2px 25px #000 inset,
+             -45px -45px 25px RGBA(0,0,0, 0.5) inset, 
+             25px 25px 45px RGBA(0,0,0, 0.45) inset;
+  margin:6em auto;
+  transform:rotateX(6deg) rotateY(6deg) rotateZ(6deg);
+}
+
+@keyframes movimiento {
+  0% { background-position:0 0 }
+  100% { background-position:355px 0 }
+}
+
+
 
 .secondGraphicsDiv{
   display: flex;
@@ -365,8 +402,9 @@ body{
 .burnDiv{
   height: 100%;
   width: 60%;
+  flex-direction: column;
   border-radius: 10px;
-  background-color: #000;
+  background-color: #000000aa;
 }
 
 .thirdGraphicsDiv{
@@ -378,9 +416,23 @@ body{
 }
 
 .insideThird{
-  height: 100%;
+  border-radius: 10px;
+  height: 50%;
   width: 100%;
-  background-color: #000;
+  background-color: #000000b0;
+}
+
+.supplyDiv{
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.supplySpan{
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: rgb(144, 144, 200);
 }
 
 .realTimeMarketCap{
@@ -389,96 +441,20 @@ body{
 }
 .secondGraphics{
   margin-top: 24px;
+  
   width: 60%;
   height: 10%;
 }
 
-.secondGraphic{
-  width: 32%;
-  height: 100%;
-  padding: 8px;
-  border-radius: 10px;
-  background-color:#050521;
-
-}
 
 
-.thirdGraphics{
-  width: 60%;
-  margin-top: 24px;
-  height: 31%;
-}
 
-.thirdGraphic{
-  width: 32%;
-  padding: 8px;
-  border-radius: 10px;
-  height: 100%;
-  animation: pinkBackground 5s ease-in-out infinite;
-}
 
 .worldIcon{
   color:rgb(93, 93, 210) ;
   margin-left: 1rem;
 }
 
-.insideGraphic{
-  width: 100%;
-  height: 100%;
-  padding: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color:hsla(277,90%,72%,1);
-  background-image:
-  radial-gradient(at 40% 20%, hsla(277,90%,72%,1) 0px, transparent 50%),
-  radial-gradient(at 80% 0%, hsla(189,100%,56%,1) 0px, transparent 50%),
-  radial-gradient(at 0% 50%, hsla(180,89%,36%,1) 0px, transparent 50%),
-  radial-gradient(at 80% 50%, hsla(340,100%,76%,1) 0px, transparent 50%),
-  radial-gradient(at 0% 100%, hsla(180,89%,36%,1) 0px, transparent 50%),
-  radial-gradient(at 80% 100%, hsla(242,100%,70%,1) 0px, transparent 50%),
-  radial-gradient(at 0% 0%, hsla(343,100%,76%,1) 0px, transparent 50%);
-}
-
-.cronometer{
-  width: 65%;
-}
-
-.CircularProgressbar-path {
-  stroke: red;
-}
-
-.orangeSpan{
-  color: orange;
-  font-size: 2.5rem;
-  font-weight: 500;
-}
-
-.secondOrangeSpan{
-  color: orange;
-  font-size: 1.5rem;
-  font-weight: 400;
-}
-
-.blueSpan{
-  color: rgb(93, 93, 210);
-  font-size: 1.5rem;
-  margin-left: 1rem;
-  font-weight: 400;
-}
-
-.graphicTitle{
-  color: white;
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  font-weight: 500;
-}
-
-.gasGraphic{
-  color: orange;
-  margin: 0 16px;
-  font-size: 2rem;
-}
 
 
 
@@ -528,6 +504,55 @@ body{
 }
 
 /* The typing effect */
+
+.gauge {
+  width: 50%;
+  font-size: 40px;
+  font-weight: 600;
+  color: rgb(255, 128, 0);
+}
+
+.gauge__body {
+  width: 100%;
+  height: 0;
+  padding-bottom: 50%;
+  background: #cbd8da;
+  position: relative;
+  border-top-left-radius: 100% 200%;
+  border-top-right-radius: 100% 200%;
+  overflow: hidden;
+}
+
+.gauge__fill {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: inherit;
+  height: 100%;
+  background: rgb(255, 128, 0);
+  transform-origin: center top;
+  transform: rotate(0.25turn);
+  transition: transform 0.2s ease-out;
+}
+
+.gauge__cover {
+  width: 75%;
+  height: 150%;
+  background: #000000;
+  border-radius: 50%;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  /* Text */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 25%;
+  box-sizing: border-box;
+}
+
 
 .footer{
   height: 25vh;
@@ -704,6 +729,10 @@ body{
     display: none;
   }
 
+  .graphics{
+    height: 150vh;
+  }
+
   .graphicTitle{
     text-align: center;
     font-size: 0.7rem;
@@ -711,11 +740,21 @@ body{
     margin-bottom: 10px;
   }
 
-  .principalGraphics{
-    width: 90%;
-    padding: 7px;
+  .secondGraphicsDiv{
+    flex-direction: column;
+    width: 100%;
   }
 
+  .burnDiv{
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .thirdGraphicsDiv{
+    flex-direction: column;
+    width: 80%;
+    margin-left: 0;
+  }
   .secondGraphics{
     flex-direction: column;
     display: flex;
@@ -748,12 +787,9 @@ body{
   animation: rotate 3.5s ease-in-out infinite
   }
 
-  .burnIcon{
-    font-size: 1.5rem;
-    margin-left: 1rem;
-  animation: rotate 3.5s ease-in-out infinite;
-  color: rgb(255, 128, 0);
-  }
+
+
+
 
   .thirdGraphics::-webkit-scrollbar {
     width: 20px;
