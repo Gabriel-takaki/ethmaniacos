@@ -2,15 +2,19 @@ import React, {useState, useEffect, useRef,  } from 'react';
 import dynamic from 'next/dynamic';
 let tvScriptLoadingPromise;
 import {FaGasPump} from "react-icons/fa";
-
-
-
+import {ImDroplet} from "react-icons/im";
+import {AiFillFire} from "react-icons/ai"
+import {TfiWorld} from "react-icons/ti"
+import {TbWorld} from "react-icons/tb"
 // const ReactSpeedometer = dynamic(
 //   () => import('react-d3-speedometer'),
 //   { ssr: false },
 // );
 
 const Graphics = () => {
+
+  const GaugeChart = dynamic(() => import('react-gauge-chart'), { ssr: false });
+
 const [gasPrice, setGasPrice] = useState("");
 const [suplyPrice, setSuplyPrice] = useState("");
 
@@ -36,9 +40,11 @@ const [suplyPrice, setSuplyPrice] = useState("");
   const fetchSuply = async () => {
     const res = await window.fetch("https://api.etherscan.io/api?module=stats&action=ethsupply&apikey=2UGKWJAH19UZ1AKMXQQNJBC6A85VJNQNH8")
     const etherscanRes = await res.json();
+    console.log(etherscanRes);
     const payload = etherscanRes.result;
-    const etherValue = (Number(payload) / 10 ** 18).toFixed(2);
-    setSuplyPrice(`${etherValue}`);
+    console.log(payload);
+    const etherValue = (Number(payload) / 10 ** 25).toFixed(0);
+    setSuplyPrice(`${etherValue}0 k`);
   }
   useEffect(() => {
     const intervalId = setInterval(fetchGasPrice, 12000);
@@ -75,12 +81,13 @@ const [suplyPrice, setSuplyPrice] = useState("");
           new window.TradingView.widget({
             // width: 980,
             autosize: true,
-            symbol: "CME:ETH1!",
-            interval: "1",
+            symbol: "CRYPTOCAP:ETH",
+          
             timezone: "Etc/UTC",
             theme: "dark",
             style: "3",
             locale: "br",
+            range: "1D",
             toolbar_bg: "#f1f3f6",
             enable_publishing: false,
             hide_top_toolbar: true,
@@ -101,110 +108,32 @@ const [suplyPrice, setSuplyPrice] = useState("");
 
 
       <div className="principalGraphics">
-        <div className='tradingview-widget-container h100'>
+        <div className='tradingview-widget-container principalGraphicsContainer'>
           <div id='tradingview_b2c58' className='h100' />
         </div>
       </div>
-      <h2 className='graphicTitle'>Arraste o gráfico para ver a movimentação Ethereum 2022/23 </h2>
 
-      <div className="secondGraphics flexBetween">
 
-        <div className="secondGraphic">
-          <div className="insideSecondGraphic">
-            <span className='orangeSpan'>{gasPrice}</span>
-            <span className='blueSpan'>GWEI</span>
-            <FaGasPump className='gasGraphic' />
-          </div>
-        </div>
+    <div className="secondGraphicsDiv">
+      <div className="burnDiv">
 
-        <div className="secondGraphic">
-          <div className="insideSecondGraphic" style={{'flexDirection': 'column'}}>
-            <span className='secondOrangeSpan'>{suplyPrice}</span>
-            <span className='blueSpan'>ETH</span>
-          </div>
-        </div>
-
-        <div className="secondGraphic">
-          <div className="insideSecondGraphic">
-            <span className='orangeSpan'>33</span>
-            <span className='blueSpan'>ETH</span>
-          </div>
-        </div>
+      <GaugeChart id="gauge-chart2" 
+  nrOfLevels={20} 
+  percent={0.86} 
+/>
       </div>
 
-      <div className="thirdGraphics flexBetween">
+      <div className="thirdGraphicsDiv">
+        <div className="insideThird" style={{marginBottom:'10px'}}>
 
-        <div className="thirdGraphic">
-          <div className="insideGraphic">
-            {/* <ReactSpeedometer
-              maxSegmentLabels={0}
-              value={33}
-              maxValue={100}
-              segments={1055}
-              fluidWidth={true}
-              currentValueText="{33} Gas"
-              ringWidth={10}
-              needleHeightRatio={0.5}
-              startColor={'#c87af8'}
-              endColor={'#55cdff'}
-              needleColor="#fff"
-              textColor={'#fff'}
-            /> */}
-          </div>
         </div>
-
-        <div className="thirdGraphic">
-          <div className="insideGraphic">
-            {/* <ReactSpeedometer
-              className='speedometer'
-              maxSegmentLabels={0}
-              value={33}
-              maxValue={100}
-              height={100}
-              segments={1055}
-              fluidWidth={true}
-              // paddingVertical={15}
-              dimensionUnit={''}
-              currentValueText="{33} Gas"
-              needleHeightRatio={0.5}
-              ringWidth={10}
-              startColor={'orange'}
-              endColor={'red'}
-              needleColor="#fff"
-              textColor={'#fff'}
-            /> */}
-
+        <div className="insideThird">
+          
           </div>
-        </div>
-
-        <div className="thirdGraphic">
-          <div className="insideGraphic">
-
-            {/* <ReactSpeedometer
-              className='speedometer'
-              maxSegmentLabels={0}
-              value={33}
-              maxValue={100}
-              height={100}
-              segments={1055}
-              fluidWidth={true}
-              // paddingVertical={15}
-              dimensionUnit={''}
-              currentValueText="{33} Gas"
-              needleHeightRatio={0.5}
-              ringWidth={10}
-              startColor={'#55cdff'}
-              endColor={'white'}
-              needleColor="#fff"
-              textColor={'#fff'}
-            /> */}
-
-          </div>
-        </div>
-
-
-
       </div>
+    </div>
+
+
     </div>
 
 

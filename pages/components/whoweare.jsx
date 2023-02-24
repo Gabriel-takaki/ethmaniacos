@@ -16,10 +16,10 @@ const WhoWeAre = () => {
         </div>
         <div className="text-container">
             <h1>ETHmaníacos: </h1>
+            <h2>Acreditamos no futuro Web3 e na revolução digital!</h2>
             <p> Somos loucos por Ethereum <br /> e pelo universo Crypto  </p>
-            <h3>Acreditamos no futuro Web3 e na revolução digital!</h3>
-            <span>Para nós o e Ethereum não é apenas uma plataforma de investimento <br /> é o futuro da tecnologia </span>
-            <p>Nosso objetivo é enxergar e agarrar todas as oportunidades dentro deste momento único e histórico onde a sociedade se divide em</p>
+            <span>Para nós o e Ethereum não <br /> é apenas uma plataforma de investimento <br /> é o futuro da tecnologia </span>
+            <p>Nosso objetivo é enxergar e agarrar <br /> todas as oportunidades dentro deste momento único e histórico onde a sociedade se divide em</p>
             <div class="typewriter">
             <h1 className="h1typewriter">Antes e depois do Ethereum...</h1>
             </div>

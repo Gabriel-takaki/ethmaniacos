@@ -37,7 +37,7 @@ const AboutEthManiacos = () => {
             
             <div className="carroussel">
                 <div></div>
-                <Carousel showStatus={false}  showIndicators={false} dynamicHeight autoPlay interval="5000" transitionTime="3000" infiniteLoop >
+                <Carousel showStatus={false}  showIndicators={false}  dynamicHeight autoPlay interval="5000" transitionTime="3000" infiniteLoop >
                     <div className="carouselContent">
                         <h1>WEB 3.0 - O ÍNICIO</h1>
                          <p>Em vez de uma Web monoplizada por grandes empresas de tecnologia, a Web3 adota a descentralização e está sendo construida e operada, pasmem, como propriedade de seus usuários,</p>
@@ -45,10 +45,10 @@ const AboutEthManiacos = () => {
                          <p>Como ? usando a rede Ethereum !</p>
                     </div>
                     <div className="carouselContent">
-                        <h1>VITALIK: O CRIADOR</h1>
-                        <p>No final de 2013 vitalic Buterin, publicou seu white paper descrevendo a ideia do ethereum, em janeiro de 2014 o Etherum foi anunciado pela primeira vez na the n </p>
-                        <br />
-                        <p>Como ? usando a rede Ethereum !</p>
+                    <h1>Sempre feliz!</h1>
+                         <p>Fico feliz se o mercado bombar porque meus Eths valorizam.Também fico feliz se o mercado cair porque posso comprar mais ETH.</p>
+                         <br />
+                         <p>A chave é encontrar uma % de exposição com a qual você se sinta confortável e ter capital suficiente para aproveitar as correções.</p>
 
                     </div>
                     <div className="carouselContent">

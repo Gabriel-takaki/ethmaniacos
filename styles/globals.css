@@ -45,13 +45,13 @@ body{
 }
 
 .imageLogo{
-  width: auto;
-  height: 40%;
+  height: auto;
+  width: 12%;
 }
 
 .links{
   width: 40%;
-  margin-left: 30%;
+  margin-left: 20%;
 }
 
 
@@ -79,6 +79,12 @@ body{
   border-radius: 5px;
   animation: grow 2.5s;
   padding: 5px 10px;
+}
+
+.whitelogo{
+  width: 80%;
+  height: auto;
+  filter: brightness(0) invert(1);
 }
 
 .ethIconeNavPrice{
@@ -207,9 +213,9 @@ body{
   border: none;
   box-shadow: #000000;
   border-radius: 5px;
-  padding: 16px 20px;
+  padding: 12px 20px;
   font-size: 0.9rem;
-  width: 40%;
+  width: 250px;
   font-weight: 600;
   cursor: pointer;
   transition: 2s;
@@ -217,14 +223,15 @@ body{
 }
 
 .ytIcon{
-  height: 20px;
+  height: 30px;
   width: auto;
   margin-right: 10px;
 }
 
 .youtubeButton:hover{
-  background: #c87af896;  /* fallback for old browsers */
   color: #ffffff;
+  background-color:hsla(189,100%,56%,1);
+  transform: scale(1.034);
 }
 
 .aboutEth{
@@ -284,7 +291,7 @@ body{
   top: 125vh;
   margin: 0 5% ;
   right: 0%;
-  height: 300px;
+  height: 50vh;
   align-items: initial;
   justify-content: space-between;
   flex-direction: column;
@@ -295,9 +302,9 @@ body{
 }
 
 .carouselContent{
+  margin-left: 40px;
   text-align: end;
   width: 80%;
-  margin-right: 17px;
 }
 
 .carroussel p {
@@ -324,25 +331,62 @@ body{
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  height: 150vh;
-  padding: 20px 0;
-  background: linear-gradient(274deg, #c87af8, #210058, #210058, #020052, #ff55e2);
+  height: 120vh;
+  padding: 30px 0;
+  background: linear-gradient(179deg, #090512, #19062c, #1f081d);
   background-size: 1000% 1000%;
-
-  -webkit-animation: bgGraphics 22s ease infinite;
-  -moz-animation: bgGraphics 22s ease infinite;
-  animation: bgGraphics 22s ease infinite;
+  -webkit-animation: bgGraphics 10s ease infinite;
+  -moz-animation: bgGraphics 10s ease infinite;
+  animation: bgGraphics 10s ease infinite;
 }
 
 .principalGraphics{
   padding: 10px;
-  animation: pinkBackground 5s ease-in-out infinite;
-  width: 60%;
+  background-color: #171717;
+  width: 70%;
   height: 43%;
   border-radius: 16px;
-
 }
 
+.principalGraphicsContainer{
+  height: 100%;
+  padding: 5px;
+}
+
+.secondGraphicsDiv{
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: space-between;
+  height: 45%;
+  width: 70%;
+}
+
+.burnDiv{
+  height: 100%;
+  width: 60%;
+  border-radius: 10px;
+  background-color: #000;
+}
+
+.thirdGraphicsDiv{
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  width: 40%;
+  height: 100%;
+}
+
+.insideThird{
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+}
+
+.realTimeMarketCap{
+  color: rgb(93, 93, 210);
+  font-size: 0.9rem;
+}
 .secondGraphics{
   margin-top: 24px;
   width: 60%;
@@ -354,7 +398,8 @@ body{
   height: 100%;
   padding: 8px;
   border-radius: 10px;
-  animation: pinkBackground 5s ease-in-out infinite;
+  background-color:#050521;
+
 }
 
 
@@ -372,14 +417,9 @@ body{
   animation: pinkBackground 5s ease-in-out infinite;
 }
 
-.insideSecondGraphic{
-  width: 100%;
-  height: 100%;
-  padding: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #07001a;
+.worldIcon{
+  color:rgb(93, 93, 210) ;
+  margin-left: 1rem;
 }
 
 .insideGraphic{
@@ -528,6 +568,11 @@ body{
 }
 
 @media screen and (max-width: 850px){
+ 
+  .imageLogo{
+    height: auto;
+    width: 30%;
+  }
 
 .animationEtherumHero{
   position: absolute;
@@ -552,6 +597,10 @@ body{
   width: 70%;
   height: auto;
   animation: float 2s ease-in-out infinite;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
   filter: drop-shadow(5px 5px 5px #000000);
 }
 
@@ -561,6 +610,7 @@ body{
   width: 170%;
   filter: drop-shadow(5px 5px 5px #000000);
   height: auto;
+  
   animation: hideon 2s ; 
 }
 
@@ -579,14 +629,17 @@ body{
   }
 
   .setaScroll{
-    left: 47%;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
     top: 95vh;
   }
   
   .youtubeButton{
     padding: 10px 20px;
     font-size: 0.7rem;
-    width: 100%;
+    width: 200px;
     font-weight: 600;
     cursor: pointer;
     text-decoration: none;
@@ -608,7 +661,10 @@ body{
   .malhaflutuante1{
     position: absolute;
     top: 104vh;
-    left: 15vh;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
     width: 50vw;
     height:auto;
     animation: spin 3s ease-in-out infinite;
@@ -618,7 +674,10 @@ body{
   .malhaflutuante2{
     position: absolute;
     top: 105vh;
-    left: 15vh;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
     width: 50vw;
     height:auto;
     animation: spinreverse 3s ease-in-out infinite;
@@ -626,27 +685,19 @@ body{
   }
 
   
-  
-  
 
   .carroussel{
-    z-index: 100;
-    width: 100%;
-    height: 100%;
-    top: 100vh;
-    background-color: rgba(0, 0, 0, 0.341);
+    top: 120vh;
     margin: 0;
+    width: 100vw;
+    height: 80vh;
   }
 
   .carouselContent{
-    margin-top: 20%;
+    margin-top: 100px;
     width: 100%;
-    height: 100%;
-    display: flex;
+    margin: 0;
     text-align: center;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
   }
 
   .cuboFlutuante3{
@@ -677,6 +728,7 @@ body{
   .secondGraphic{
     width: 100%;
     height: 100%;
+    box-shadow: rgba(0, 0, 0, 0.572) 10px 5px 15px;
     margin-bottom: 16px;
   }
 
@@ -688,6 +740,19 @@ body{
     overflow-x: auto;
     overflow-y:hidden ;
     padding-left: 24px;
+  }
+
+  .supplyIcon{
+    font-size: 1.5rem;
+    margin-left: 1rem;
+  animation: rotate 3.5s ease-in-out infinite
+  }
+
+  .burnIcon{
+    font-size: 1.5rem;
+    margin-left: 1rem;
+  animation: rotate 3.5s ease-in-out infinite;
+  color: rgb(255, 128, 0);
   }
 
   .thirdGraphics::-webkit-scrollbar {

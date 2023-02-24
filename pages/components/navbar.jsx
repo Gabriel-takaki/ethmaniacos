@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import logoNavBar from "public/logonavbar.webp"
+import newLogo from "public/newlogo.png"
 import ethIcone from "public/ethicone.webp"
 import axios from "axios";
 import {FaGasPump} from "react-icons/fa";
@@ -55,7 +56,7 @@ const NavBar = () => {
     <nav className="navBar flexBetween full-width">
 
                 <Image
-                src={logoNavBar}
+                src={newLogo}
                 alt="ETH logo"
                 className="imageLogo"
                 />
@@ -76,6 +77,9 @@ const NavBar = () => {
         </a>
         <a href="#whoweare" className="linksi">
           QUEM SOMOS
+        </a>
+        <a href="https://br.investing.com/" target='blank' className="linksi">
+          NOVIDADES
         </a>
       </div>
 
