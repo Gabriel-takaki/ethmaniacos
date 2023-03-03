@@ -11,9 +11,17 @@ const Footer = () => {
             {/* <video className="firstVideo" src={bg2} autoPlay loop muted ></video> */}
                 <p>Nossas redes sociais</p>
           <div className="socialMedia flexBetween">
-            <AiOutlineYoutube/>     
+            <a href="https://www.youtube.com/@ethmaniacos/" style={{color: '#fff'}}>
+            <AiOutlineYoutube />     
+            </a>
+
+            <a href="" style={{color: '#fff'}}>
             <AiOutlineInstagram/>   
+            </a>
+
+            <a href="https://twitter.com/EthManiacos" style={{color: '#fff'}}>
             <AiOutlineTwitter/>   
+            </a>
           </div>
           <p>ETHmaniacos ® </p>
         </div>

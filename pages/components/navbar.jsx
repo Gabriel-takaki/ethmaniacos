@@ -61,6 +61,15 @@ const NavBar = () => {
                 className="imageLogo"
                 />
 
+
+
+                <Image
+                src={ethIcone}
+                alt="ETH logo"
+                className="iconLogo"
+                />
+                
+
       <div className="hamburger" onClick={() => setNavBarOpen(!navBarOpen)}>
         <i className={`fas fa-${navBarOpen ? "times" : "bars"}`} />
       </div>

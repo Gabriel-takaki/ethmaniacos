@@ -6,6 +6,7 @@ import {ImDroplet} from "react-icons/im";
 import {AiFillFire} from "react-icons/ai"
 import {TfiWorld} from "react-icons/ti"
 import {TbWorld} from "react-icons/tb"
+import {MdOutlineAttachMoney} from "react-icons/md"
 import Gauge from './Gauge';
 
 
@@ -19,6 +20,19 @@ const [suplyPrice, setSuplyPrice] = useState("");
   const percentage = 656;
 
   const onLoadScriptRef = useRef();
+
+  const [openPrice, setOpenPrice] = useState(null);
+
+
+  useEffect(() => {
+    fetch('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=ETH&tsyms=USD,EUR')
+      .then(response => response.json())
+      .then(data => {
+        console.log(data.DISPLAY.ETH)
+        setOpenPrice(data.DISPLAY.ETH.USD.OPENDAY.replace('$', ''))
+      }
+      );
+  }, []);
 
 
   const fetchGasPrice = async () => {
@@ -105,6 +119,11 @@ const [suplyPrice, setSuplyPrice] = useState("");
     <div className="graphics">
 
 
+      <div className=' marketCapDiv'>
+        <span className='marketCapSpan'>Market cap</span>
+        <div className='marketCapLine'></div>
+      </div>
+
       <div className="principalGraphics">
         <div className='tradingview-widget-container principalGraphicsContainer'>
           <div id='tradingview_b2c58' className='h100' />
@@ -133,8 +152,9 @@ const [suplyPrice, setSuplyPrice] = useState("");
         </div>
 
 
-        <div className="insideThird">
-          
+        <div className="insideThird openDiv">
+          <span className='openSpan'>Abertura hoje </span>
+          <span className='openPrice flex'> <MdOutlineAttachMoney className='moneyIcon'/> {openPrice}</span>
           </div>
       </div>
     </div>
